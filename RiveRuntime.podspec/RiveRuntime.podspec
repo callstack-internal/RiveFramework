@@ -1,11 +1,9 @@
-require 'json'
-
 Pod::Spec.new do |spec|
   spec.name         = "RiveRuntime"
   spec.version      = "1.0.0"
   spec.summary      = "iOS SDK for Rive"
   spec.description  = "Rive iOS framework"
-  spec.homepage     = "www.google.com"
+  spec.homepage     = "https://github.com/callstack-internal/RiveFramework"
   spec.license      = { :type => "MIT", :text => <<-LICENSE
     Copyright (c) 2020 Callstack.
 
@@ -28,15 +26,16 @@ Pod::Spec.new do |spec|
     SOFTWARE.
     LICENSE
   }
-  spec.authors      = { "adam" => "adam@callstack.com" }
+  spec.authors = { "adamTrz" => "" }
   spec.platform               = :ios, '11.3'
   spec.ios.deployment_target  = '11.3'
   spec.swift_version          = '5.0'
   spec.source       = { 
     :git => "https://github.com/callstack-internal/RiveFramework.git",
     :tag => "v#{spec.version}"
-   }
+  }
   spec.ios.vendored_frameworks = 'RiveRuntime.xcframework'
   spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 end
+
